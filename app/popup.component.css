@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  width: 80%;
+  background-color: lightgrey;
+  padding: 10px;
+  margin: auto;
+  position: relative;
+  font-size: 2em;
+  text-align: center;
+}
+
+:host button {
+  border-radius: 100px;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+#closeBtn {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+#prevBtn {
+  top: 100px;
+  position: absolute;
+  left:0;
+}
+
+#nextBtn {
+  top: 100px;
+  position: absolute;
+  right:0;
+}
+
+img {
+  display: none;
+}
+
+.visible-img {
+  display: block;
+}

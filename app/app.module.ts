@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
+import { PopupComponent } from './popup.component';
+import { PopupDirective } from './popup.directive';
 
 @NgModule({
   imports: [
@@ -10,7 +12,9 @@ import { MediaItemComponent } from './media-item.component';
   ],
   declarations: [
     AppComponent,
-    MediaItemComponent
+    MediaItemComponent,
+    PopupComponent,
+    PopupDirective
   ],
   bootstrap: [
     AppComponent

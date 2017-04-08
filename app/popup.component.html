@@ -1,0 +1,9 @@
+<button id="prevBtn" (click)="prevImg()">&lt;</button>
+<img *ngFor="let image of popupItem.images" src="{{ image.URL }}" alt="" [imgShow]="image.visible">
+<button id="nextBtn" (click)="nextImg()">&gt;</button>
+<h1>{{ popupItem.name }}</h1>
+<div>Watched on {{ popupItem.watchedOn }}</div>
+<div>{{ popupItem.category }}</div>
+<div>{{ popupItem.year }}</div>
+
+<button id="closeBtn" (click)="closePopup()">X</button>

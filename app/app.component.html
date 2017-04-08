@@ -3,5 +3,15 @@
     <h1>Media Watch List</h1>
     <p class="description">Keeping track of the media I want to watch.</p>
   </header>
-  <mw-media-item [mediaItem]="firstMediaItem"></mw-media-item>
+  <mw-media-item 
+  [mediaItem]="mediaItem" 
+  (preview)="onMediaItemPreview($event)"
+  *ngFor="let mediaItem of mediaItems"></mw-media-item>
+  <mw-popup
+  [popupItem]="popupItem"
+  (close)="onPopupClose()"
+  (prev)="onPopupPrev()"
+  (next)="onPopupNext()"
+  *ngIf="popupItem"
+  ></mw-popup>
 </section>
