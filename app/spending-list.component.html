@@ -1,0 +1,23 @@
+<header class="page-header">
+    <h1>Your Spending</h1>
+</header>
+<section>
+    <div class="row">
+
+        <div class="col-sm-6"
+        *ngFor="let spending of spendings">
+            <div class="panel"
+            action
+            [ngClass]="{'panel-info': spending.category==='Food', 'panel-warning': spending.category==='Vehicle', 'panel-success': spending.category==='Clothing', 'panel-default': spending.category==='Other'}">
+                <div class="panel-heading">
+                    <h4>{{ spending.name }} <small>{{ spending.category }}</small></h4>
+                    <p>{{ spending.price | currency }}</p>
+                    <p>{{ spending.date | date: 'shortDate' }}</p>
+
+                    <button type="button" class="btn btn-danger action" (click)="onDelete(spending)">Delete</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

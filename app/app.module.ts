@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule, XHRBackend } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MediaItemComponent } from './media-item.component';
-import { MediaItemListComponent } from './media-item-list.component';
-import { FavoriteDirective } from './favorite.directive';
-import { CategoryListPipe } from './category-list.pipe';
-import { MediaItemFormComponent } from './media-item-form.component';
-import { MediaItemService } from './media-item.service';
+import { SpendingListComponent } from './spending-list.component';
+import { SpendingFormComponent } from './spending-form.component';
+import { AppService } from './app.service';
+import { CurrencyPipe } from'./currency.pipe'
 import { lookupListToken, lookupLists } from './providers';
-import { MockXHRBackend } from './mock-xhr-backend';
 import { routing } from './app.routing';
+import { ActionDirective } from './action.directive';
 
 @NgModule({
   imports: [
@@ -23,16 +21,14 @@ import { routing } from './app.routing';
   ],
   declarations: [
     AppComponent,
-    MediaItemComponent,
-    MediaItemListComponent,
-    FavoriteDirective,
-    CategoryListPipe,
-    MediaItemFormComponent
+    SpendingListComponent,
+    SpendingFormComponent,
+    CurrencyPipe,
+    ActionDirective
   ],
   providers: [
-    MediaItemService,
-    { provide: lookupListToken, useValue: lookupLists },
-    { provide: XHRBackend, useClass: MockXHRBackend }
+    AppService,
+    { provide: lookupListToken, useValue: lookupLists }
   ],
   bootstrap: [
     AppComponent

@@ -1,0 +1,8 @@
+.action {
+    display: none;
+}
+
+.show-action .action {
+    display: inline-block;
+}
+

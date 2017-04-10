@@ -1,12 +1,12 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { MediaItemFormComponent } from './media-item-form.component';
-import { MediaItemListComponent } from './media-item-list.component';
+import { SpendingListComponent } from './spending-list.component';
+import { SpendingFormComponent } from './spending-form.component';
 
 const appRoutes: Routes = [
-  { path: 'add', component: MediaItemFormComponent },
-  { path: ':medium', component: MediaItemListComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'all' }
+  { path: 'form', component: SpendingFormComponent},
+  { path: ':category', component: SpendingListComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
